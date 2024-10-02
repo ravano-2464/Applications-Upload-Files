@@ -37,7 +37,7 @@ your-project/
 │
 └── package.json (Project metadata and dependencies)
 ```
-```
+
 ### Getting Started
 
 ### 1. Clone the Repository
