@@ -14,7 +14,7 @@ Before running the application, ensure you have the following installed:
 ## Project Structure
 
 The basic folder structure of this project is as follows :
-
+```
 your-project/
 │
 ├── public/
