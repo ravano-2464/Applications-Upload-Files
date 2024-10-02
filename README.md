@@ -222,5 +222,4 @@ Here’s a quick guide to using Git for this project:
 
 This project is licensed under the MIT License.
 ```
-
 It explains everything from setting up the environment, running the app, using Git, and troubleshooting common issues. You can modify the details according to your specific project setup.
