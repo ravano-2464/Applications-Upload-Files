@@ -58,9 +58,9 @@ npm install
 
 The dependencies required are:
 
-- **express** : Web framework for Node.js
-- **multer** : Middleware for handling file uploads
-- **pg** : PostgreSQL client for Node.js
+- express : Web framework for Node.js
+- multer : Middleware for handling file uploads
+- pg : PostgreSQL client for Node.js
 
 ### 3. PostgreSQL Setup
 
