@@ -37,8 +37,8 @@ your-project/
 
 If you haven't already, clone the repository to your local machine:
 
-```bash
-git clone <repository-url>
+```
+git clone <https://github.com/ravano-2464/Applications-Upload-Files.git>
 cd your-project
 ```
 
