@@ -16,7 +16,7 @@ Before running the application, ensure you have the following installed:
 
 The basic folder structure of this project is as follows :
 
-```
+```md
 your-project/
 │
 ├── public/
@@ -36,7 +36,6 @@ your-project/
 ├── server.js (Main application file)
 │
 └── package.json (Project metadata and dependencies)
-
 
 ## Getting Started
 
