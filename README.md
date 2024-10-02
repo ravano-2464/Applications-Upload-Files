@@ -40,11 +40,11 @@ your-project/
 
 ### 1. Clone the Repository
 
-If you haven't already, clone the repository to your local machine:
+If you haven't already, clone the repository to your local machine :
 
+```
 git clone <https://github.com/ravano-2464/Applications-Upload-Files.git>
 cd your-project
-```
 ```
 ### 2. Install Dependencies
 
