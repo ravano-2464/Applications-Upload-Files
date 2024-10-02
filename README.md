@@ -36,7 +36,6 @@ your-project/
 ├── server.js (Main application file)
 │
 └── package.json (Project metadata and dependencies)
-```md
 
 ## Getting Started
 
@@ -44,7 +43,6 @@ your-project/
 
 If you haven't already, clone the repository to your local machine:
 
-```
 git clone <https://github.com/ravano-2464/Applications-Upload-Files.git>
 cd your-project
 ```
