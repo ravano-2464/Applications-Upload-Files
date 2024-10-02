@@ -85,9 +85,10 @@ const pool = new Pool({
 
 To start the server, use the following command:
 
-node app.js
 ```
+node app.js
 
+```
 The application will start running on `http://localhost:3000`.
 
 ### 5. Access the Application
