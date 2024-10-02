@@ -101,7 +101,7 @@ The application will start running on `http://localhost:3000`.
 
 The project includes the following HTML files for the user interface:
 
-- Home.html: The upload form.
+- Home.html : The upload form.
 
 ```
 <!DOCTYPE html>
