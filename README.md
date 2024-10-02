@@ -50,8 +50,9 @@ cd your-project
 
 Navigate to your project folder and install the required dependencies:
 
-
+```
 npm install
+```
 
 The dependencies required are:
 
@@ -70,8 +71,9 @@ CREATE TABLE upload_files (
     description TEXT NOT NULL
 );
 
-Update your PostgreSQL configuration in the code if needed:
+Update your PostgreSQL configuration in the code if needed :
 
+```
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
@@ -79,13 +81,15 @@ const pool = new Pool({
     password: 'FerariF12',
     port: 5432,
 });
+```
 
 ### 4. Run the Application
 
-To start the server, use the following command:
+To start the server, use the following command :
 
+```
 node app.js
-
+```
 The application will start running on `http://localhost:3000`.
 
 ### 5. Access the Application
@@ -98,7 +102,8 @@ The application will start running on `http://localhost:3000`.
 The project includes the following HTML files for the user interface:
 
 - Home.html: The upload form.
-  
+
+```
 <!DOCTYPE html>
 <html lang="en">
 
@@ -135,9 +140,11 @@ The project includes the following HTML files for the user interface:
     </div>
 </body>
 </html>
+```
 
 - Uploaded-Files.html : Displays a list of uploaded files.
-  
+
+```  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -273,49 +280,51 @@ Here’s a quick guide to using Git for this project:
 
 1. **Initialize a Git repository** (if not already done):
 
-   ```bash
+   ```
    git init
    ```
 
 2. **Add files to staging**:
 
-   ```bash
+   ```
    git add .
    ```
 
 3. **Commit your changes**:
 
-   ```bash
+   ```
    git commit -m "Initial commit"
    ```
 
 4. **Create a new branch** (optional):
 
-   ```bash
+   ```
    git checkout -b feature-branch
    ```
 
 5. **Merge changes into the main branch**:
 
-   ```bash
+   ```
    git checkout main
    git merge feature-branch
    ```
 
 6. **Push changes to a remote repository** (if applicable):
 
-   ```bash
+   ```
    git remote add origin <repository-url>
    git push -u origin main
    ```
 
 ### 10. Troubleshooting
 
-- **Database connection error**: Ensure PostgreSQL is running and the database credentials are correct in the `app.js` file.
-- **Multer error**: If the file type is not supported, you’ll see an error. Ensure the file type is in the allowed list.
+- Database connection error : Ensure PostgreSQL is running and the database credentials are correct in the `app.js` file.
+- Multer error : If the file type is not supported, you’ll see an error. Ensure the file type is in the allowed list.
 
 ## License
 
 This project is licensed under the MIT License.
+
 ```
 It explains everything from setting up the environment, running the app, using Git, and troubleshooting common issues. You can modify the details according to your specific project setup.
+```
