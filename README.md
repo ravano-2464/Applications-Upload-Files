@@ -9,8 +9,8 @@ This project is a simple file upload application built using Node.js and Express
 
 Before running the application, ensure you have the following installed:
 
-- Node.js : [Download Node.js] (https://nodejs.org/)
-- PostgreSQL : [Download PostgreSQL] (https://www.postgresql.org/)
+- Download Node.js : (https://nodejs.org/)
+- Download PostgreSQL : (https://www.postgresql.org/)
 
 ## Project Structure
 
