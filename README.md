@@ -1,9 +1,9 @@
-Berikut adalah format **`README.md`** untuk menjelaskan langkah-langkah yang diperlukan untuk menjalankan aplikasi Anda:
+So Here The Instructions To Run My Application  
 
 ```md
 # File Upload Application with Express and PostgreSQL
 
-This project is a simple file upload application built using **Node.js** and **Express**, with **PostgreSQL** as the database. The application allows users to upload various types of files and store metadata (title and description) in the database.
+This project is a simple file upload application built using Node.js and Express, with PostgreSQL as the database. The application allows users to upload various types of files and store metadata (title and description) in the database.
 
 ## Prerequisites
 
