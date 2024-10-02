@@ -85,9 +85,7 @@ const pool = new Pool({
 
 To start the server, use the following command:
 
-```bash
 node app.js
-```
 
 The application will start running on `http://localhost:3000`.
 
@@ -120,9 +118,8 @@ The project includes the following HTML files for the user interface:
     <a href="/files">View Uploaded Files</a>
 </body>
 </html>
-```
 
-- **Files.html**: Displays a list of uploaded files.
+- **Uploaded-Files.html**: Displays a list of uploaded files.
   
 <!DOCTYPE html>
 <html lang="en">
