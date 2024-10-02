@@ -1,6 +1,6 @@
 So Here The Instructions To Run My Application  
 
-```md
+```
 # File Upload Application with Express and PostgreSQL
 
 This project is a simple file upload application built using Node.js and Express, with PostgreSQL as the database. The application allows users to upload various types of files and store metadata (title and description) in the database.
@@ -16,7 +16,7 @@ Before running the application, ensure you have the following installed:
 
 The basic folder structure of this project is as follows :
 
-```md
+```
 your-project/
 │
 ├── public/
