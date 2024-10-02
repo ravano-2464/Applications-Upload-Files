@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Files</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../icons/Upload-File.ico">
+    <link rel="stylesheet" href="../styles/Uploaded-Files-Style.css"> 
+</head>
+<body>
+    <div id="success-message" style="display: none; color: green; width: 50%; border-radius: 10px;" class="message-box">
+        <i class="fa-solid fa-check"></i> File And Data Uploaded Successfully! This Massage Will Be Closed Automaticly In <span id="success-countdown"></span>
+    </div>
+
+    <div id="error-message" style="display: none; color: red; width: 42%; border-radius: 10px;" class="message-box">
+        <i class="fa-solid fa-xmark"></i> No files uploaded yet. This Massage Will Be Closed Automaticly In <span id="error-countdown"></span>
+    </div>
+
+    <div class="container">
+        <h1><i class="fa-solid fa-cloud-arrow-up"></i> Uploaded Files</h1>
+
+        <div style="display: flex; justify-content: center; width: 100%; max-width: 1100px;">
+            <table border="1" style="text-align: center;"> 
+                <thead>
+                    <tr>
+                        <th><i class="fa-solid fa-clapperboard"></i> Title</th>
+                        <th><i class="fa-solid fa-circle-info"></i> Description</th>
+                        <th><i class="fa-solid fa-file"></i> File Path</th>
+                    </tr>
+                </thead>
+                <tbody id="file-list">
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <a href="/" class="btn-back-upload-page"><i class="fa-solid fa-arrow-left"></i> Go back to upload page</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const success = urlParams.get('success');
+    
+        if (success) {
+            const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            window.history.replaceState({ path: newUrl }, '', newUrl);
+        }
+    
+        if (success === 'true') {
+            const successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block'; 
+    
+            let countdown = 5; 
+            const successCountdown = document.getElementById('success-countdown');
+            successCountdown.textContent = `${countdown} seconds`;
+    
+            const successInterval = setInterval(() => {
+                countdown--;
+                successCountdown.textContent = `${countdown} seconds`;
+                if (countdown <= 0) {
+                    clearInterval(successInterval);
+                    successMessage.style.display = 'none'; 
+                }
+            }, 1000); 
+        }
+    
+        // Handle file fetching and error message
+        async function fetchFiles() {
+            const response = await fetch('/api/files'); 
+            const files = await response.json();
+            const fileList = document.getElementById('file-list');
+            const errorMessage = document.getElementById('error-message');
+    
+            if (files.length > 0) {
+                files.forEach(file => {
+                    const row = document.createElement('tr');
+    
+                    const titleCell = document.createElement('td');
+                    titleCell.textContent = file.title;
+                    row.appendChild(titleCell);
+    
+                    const descriptionCell = document.createElement('td');
+                    descriptionCell.textContent = file.description;
+                    row.appendChild(descriptionCell);
+    
+                    const filePathCell = document.createElement('td');
+                    filePathCell.textContent = file.file_path;
+                    row.appendChild(filePathCell);
+    
+                    fileList.appendChild(row);
+                });
+            } else {
+                const errorCountdown = document.getElementById('error-countdown');
+                errorMessage.style.display = 'block'; 
+    
+                let countdown = 5;
+                errorCountdown.textContent = `${countdown} seconds`;
+    
+                const errorInterval = setInterval(() => {
+                    countdown--;
+                    errorCountdown.textContent = `${countdown} seconds`;
+                    if (countdown <= 0) {
+                        clearInterval(errorInterval);
+                        errorMessage.style.display = 'none'; 
+                    }
+                }, 1000); 
+            }
+        }
+    
+        fetchFiles();
+    </script>    
+</body>
+</html>

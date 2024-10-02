@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Upload File</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../icons/Upload-File.ico">
+    <link rel="stylesheet" href="../styles/Home-Style.css"> 
+</head>
+
+<body>
+    <div class="container">
+        <h1><i class="fa-brands fa-app-store-ios"></i> Application Upload File</h1>
+        <h2><i class="fa-solid fa-user"></i> By Ravano Akbar Widodo</h2>
+        <br>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="title"><i class="fa-solid fa-clapperboard"></i> Title :</label>
+            <input type="text" id="title" name="title" class="form-input" placeholder="Enter file title" required><br><br>
+
+            <label for="description"><i class="fa-solid fa-circle-info"></i> Description :</label>
+            <input type="text" id="description" name="description" class="form-input" placeholder="Enter file description" required><br><br>
+
+            <label for="file"><i class="fa-solid fa-file-import"></i> Choose A File :</label>
+            <input type="file" id="file" name="Files" class="form-input" required><br><br>
+
+            <button type="submit" class="btn-upload"><i class="fa-solid fa-upload"></i> Upload Data And Files</button>
+            <br>
+            <a href="/files" class="btn-go-to-uploaded-page"><i class="fa-solid fa-arrow-right"></i> Go To Uploaded Pages</a>
+        </form>
+        <br>
+        <div id="success-message"></div>
+    </div>
+</body>
+</html>
