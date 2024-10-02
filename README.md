@@ -14,23 +14,29 @@ Before running the application, ensure you have the following installed:
 
 ## Project Structure
 
-The basic folder structure of this project is as follows:
+The basic folder structure of this project is as follows :
 
 ```
 your-project/
 │
 ├── public/
+│   ├── icons/
+│   │   └── Upload-File.ico
+│   ├── migrations/
+│   │   └── migrations_Application_Upload_Files.sql
+│   ├── styles/
+│   │   ├── Home-Style.css
+│   │   └── Uploaded-Files-Style.css
 │   ├── views/
 │   │   ├── Home.html
-│   │   └── Files.html
+│   │   └── Uploaded-Files.html
 │
 ├── Uploads_Files/ (This folder is automatically created when the app runs)
 │
-├── app.js (Main application file)
+├── server.js (Main application file)
 │
 └── package.json (Project metadata and dependencies)
-```
-```
+``` 
 
 ## Getting Started
 
