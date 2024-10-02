@@ -29,7 +29,7 @@ your-project/
 ├── app.js (Main application file)
 │
 └── package.json (Project metadata and dependencies)
-```
+
 
 ## Getting Started
 
